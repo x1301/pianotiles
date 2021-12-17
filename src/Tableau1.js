@@ -128,7 +128,6 @@ class Tableau1 extends Phaser.Scene{
             repeat: -1
         });
         this.feu1.visible=false
-
         /**
          * dragonvert iddle
          * @type {Phaser.GameObjects.Sprite}
@@ -220,10 +219,6 @@ class Tableau1 extends Phaser.Scene{
          * dragonnoir flightr
          * @type {Phaser.GameObjects.Sprite}
          */
-        
-
-
-
         this.initKeyboard();
     }
 

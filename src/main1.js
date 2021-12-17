@@ -7,7 +7,7 @@ let gameConfig = {
         autoCenter: Phaser.Scale.CENTER_BOTH,
         min: {
             width: 978,
-            height: 501
+            height: 501,
         },
         max: {
             width: 1728,
