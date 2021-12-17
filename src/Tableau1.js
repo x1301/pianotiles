@@ -24,6 +24,9 @@ class Tableau1 extends Phaser.Scene{
         for(let j=1;j<=26;j++) {
             this.load.image('jumpr' + j, 'assets/dragon/dragonrouge/juump/jumpr' + j + '.png');
         }
+        this.load.audio('foudre','audio/bruit tonerre.mp3');
+        this.load.audio('drake','audio/dragon roar.mp3');
+
 
 
 
@@ -150,7 +153,7 @@ class Tableau1 extends Phaser.Scene{
         this.anims.create({
             key: 'attack',
             frames: this.getFrames('attack',33),
-            frameRate: 20,
+            frameRate: 11,
             repeat: 0,
             hideOnComplete:true,
         });
@@ -215,10 +218,7 @@ class Tableau1 extends Phaser.Scene{
         });
         this.dragonjumpr.visible=false
         this.dragonjumpr.scale=0.3
-        /**
-         * dragonnoir flightr
-         * @type {Phaser.GameObjects.Sprite}
-         */
+
         this.initKeyboard();
     }
 
@@ -232,18 +232,22 @@ class Tableau1 extends Phaser.Scene{
             switch (kevent.keyCode) {
                 case Phaser.Input.Keyboard.KeyCodes.A:
                     me.laveee.visible=true
+                    me.sound.play('foudre')
                     me.laveee.play('lazerss')
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.Z:
                     me.laveee1.visible=true
+                    me.sound.play('foudre')
                     me.laveee1.play('lazer')
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.E:
                     me.laveee2.visible=true
+                    me.sound.play('foudre')
                     me.laveee2.play('lazers')
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.R:
                     me.laveee3.visible=true
+                    me.sound.play('foudre')
                     me.laveee3.play('lazerr')
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.T:
@@ -252,6 +256,7 @@ class Tableau1 extends Phaser.Scene{
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.Y:
                     me.dragonattck.visible=true
+                    me.sound.play('drake')
                     me.dragonattck.play('attack')
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.U:
